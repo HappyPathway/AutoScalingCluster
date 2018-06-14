@@ -21,7 +21,7 @@ variable "domain" {}
 variable "key_name" {}
 
 variable "min_size" {
-  default = 1
+  default = 3
 }
 
 variable "max_size" {
