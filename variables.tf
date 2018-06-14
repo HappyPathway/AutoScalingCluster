@@ -57,7 +57,7 @@ variable "service_healthcheck_timeout" {
 }
 
 variable "service_healthcheck_interval" {
-  default = 30
+  default = 300
 }
 
 variable "instance_protocol" {
