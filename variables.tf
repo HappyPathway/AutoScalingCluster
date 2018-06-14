@@ -20,10 +20,6 @@ variable "domain" {}
 
 variable "key_name" {}
 
-variable "image_id" {
-  default = "ami-43a15f3e"
-}
-
 variable "min_size" {
   default = 1
 }
@@ -83,3 +79,13 @@ variable "connection_draining" {
 variable "idle_timeout" {
   default = 400
 }
+
+variable "set_dns" {
+  default = false
+}
+
+variable "cluster_ttl" {
+  default = 48
+}
+
+variable "owner" {}
