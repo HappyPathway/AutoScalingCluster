@@ -59,7 +59,3 @@ resource "aws_security_group" "elb" {
     create_before_destroy = true
   }
 }
-
-output "elb_security_group" {
-  value = "aws_security_group.elb.id"
-}
