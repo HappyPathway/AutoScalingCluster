@@ -9,29 +9,23 @@ resource "aws_autoscaling_group" "scalegroup" {
   health_check_type    = "ELB"
   default_cooldown     = "${var.default_cooldown}"
 
-  name = "${var.company_name}-${var.org_name}-${var.service_name}"
+  name = "{var.service_name}"
 
   tag {
-    key                 = "service_name"
+    key                 = "Name"
     value               = "${var.service_name}"
     propagate_at_launch = true
   }
 
   tag {
-    key                 = "company_name"
-    value               = "${var.company_name}"
+    key                 = "owner"
+    value               = "${var.owner}"
     propagate_at_launch = true
   }
 
   tag {
-    key                 = "org_name"
-    value               = "${var.org_name}"
-    propagate_at_launch = true
-  }
-
-  tag {
-    key                 = "Name"
-    value               = "${var.company_name}-${var.org_name}-${var.service_name}"
+    key                 = "TTL"
+    value               = "${var.cluster_ttl}"
     propagate_at_launch = true
   }
 }

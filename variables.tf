@@ -14,13 +14,8 @@ variable "ssh_access" {
   default = "0.0.0.0/0"
 }
 
-variable "docker_access" {
-  default = "0.0.0.0/0"
-}
-
 variable "instance_type" {}
-variable "company_name" {}
-variable "org_name" {}
+
 variable "domain" {}
 
 variable "key_name" {}
@@ -49,8 +44,8 @@ variable "default_cooldown" {
   default = 600
 }
 
-variable "public_subnet_id" {}
 variable "private_subnet_id" {}
+
 variable "vpc_id" {}
 
 variable "service_healthcheck_healthy_threshold" {
