@@ -1,7 +1,7 @@
 resource "aws_elb" "service" {
   name            = "${var.service_name}"
   subnets         = ["${var.private_subnet_id}"]
-  security_groups = ["${aws_security_group.service.id}"]
+  security_groups = ["${aws_security_group.elb.id}"]
   internal        = false
 
   listener {
