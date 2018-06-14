@@ -8,7 +8,7 @@ resource "aws_elb" "service" {
     instance_port     = "${var.service_port}"
     instance_protocol = "${var.instance_protocol}"
     lb_port           = "${var.service_port}"
-    lb_protocol       = "tcp"
+    lb_protocol       = "http"
   }
 
   health_check {
